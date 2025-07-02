@@ -1,7 +1,7 @@
 {
-  "variants": [
-    {
-      "model": "voidcraft:deepslate_argon_ore"
+  "variants": {
+    "": {
+      "model": "voidcraft:block/deepslate_argon_ore"
     }
-  ]
+  }
 }
