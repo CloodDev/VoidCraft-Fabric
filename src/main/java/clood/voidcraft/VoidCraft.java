@@ -14,7 +14,7 @@ public class VoidCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// ModBlocks.registerModBlocks();
+		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 	}

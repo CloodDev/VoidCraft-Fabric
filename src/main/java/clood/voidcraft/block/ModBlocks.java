@@ -3,7 +3,6 @@ package clood.voidcraft.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import clood.voidcraft.VoidCraft;
 import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -12,12 +11,10 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
   public static final Block DEEPSLATE_ARGON_ORE = registerBlock("deepslate_argon_ore",
-      new ExperienceDroppingBlock(UniformIntProvider.create(3, 7),
-          AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+      new Block(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
   private static Block registerBlock(String name, Block block) {
     registerBlockItem(name, block);
