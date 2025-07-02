@@ -1,7 +1,7 @@
 package clood.voidcraft.items;
 
-import clood.voidcraft.VoidCraft;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import clood.voidcraft.VoidCraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -13,23 +13,13 @@ public class ModItems {
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(VoidCraft.MOD_ID, name), item);
-    };
+    }
 
     public static void registerModItems() {
         VoidCraft.LOGGER.info("Registering Items for " + VoidCraft.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            // items
             entries.add(ARGON_CRYSTAL);
-            // blocks
-
-            // tools
-
-            // armor
-
-            // weapons
-
-            // food
         });
     }
 }
