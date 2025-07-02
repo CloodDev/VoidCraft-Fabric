@@ -19,6 +19,7 @@ public class ModItemGroups {
           .entries((context, entries) -> {
             entries.add(new ItemStack(ModItems.ARGON_CRYSTAL));
             entries.add(new ItemStack(ModBlocks.DEEPSLATE_ARGON_ORE));
+            entries.add(new ItemStack(ModBlocks.ARGON_CRYSTAL_BLOCK));
           })
           .build());
 

@@ -1,37 +1,33 @@
 package clood.voidcraft.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+
+import java.util.function.Function;
+
 import clood.voidcraft.VoidCraft;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-  public static final Block DEEPSLATE_ARGON_ORE;
+  public static final Block DEEPSLATE_ARGON_ORE = register("deepslate_argon_ore", Block::new,
+      AbstractBlock.Settings.create().strength(4.0f));
+  public static final Block ARGON_CRYSTAL_BLOCK = register("argon_crystal_block", Block::new,
+      AbstractBlock.Settings.create().strength(5.0f));
 
-  static {
-    DEEPSLATE_ARGON_ORE = registerBlock("deepslate_argon_ore",
-        new Block(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)
-            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(VoidCraft.MOD_ID, "deepslate_argon_ore")))));
-  }
+  private static Block register(String path, Function<AbstractBlock.Settings, Block> factory,
+      AbstractBlock.Settings settings) {
+    final Identifier identifier = Identifier.of(VoidCraft.MOD_ID, path);
+    final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
 
-  private static Block registerBlock(String name, Block block) {
-    registerBlockItem(name, block);
-    return Registry.register(Registries.BLOCK, Identifier.of(VoidCraft.MOD_ID, name), block);
-  }
-
-  private static void registerBlockItem(String name, Block block) {
-    Registry.register(Registries.ITEM, Identifier.of(VoidCraft.MOD_ID, name),
-        new BlockItem(block,
-            new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(VoidCraft.MOD_ID, name)))));
+    final Block block = Blocks.register(registryKey, factory, settings);
+    Items.register(block);
+    return block;
   }
 
   public static void registerModBlocks() {

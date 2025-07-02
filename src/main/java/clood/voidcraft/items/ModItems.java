@@ -1,24 +1,26 @@
 package clood.voidcraft.items;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+
+import java.util.function.Function;
+
 import clood.voidcraft.VoidCraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item ARGON_CRYSTAL = registerItem("argon_crystal", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(VoidCraft.MOD_ID, "argon_crystal")))));
+    public static final Item ARGON_CRYSTAL = register("argon_crystal", Item::new, new Item.Settings());
 
-    private static Item registerItem(String name, Item item) {
-        Identifier id = Identifier.of(VoidCraft.MOD_ID, name);
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        return Registry.register(Registries.ITEM, key, item);
+    private static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
+        final Identifier identifier = Identifier.of(VoidCraft.MOD_ID, path);
+        final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, identifier);
+
+        return Items.register(registryKey, factory, settings);
     }
 
     public static void registerModItems() {
