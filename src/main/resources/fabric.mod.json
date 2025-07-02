@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "voidcraft",
+	"version": "${version}",
+	"name": "VoidCraft",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/voidcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"clood.voidcraft.VoidCraft"
+		],
+		"client": [
+			"clood.voidcraft.VoidCraftClient"
+		],
+		"fabric-datagen": [
+			"clood.voidcraft.VoidCraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"voidcraft.mixins.json",
+		{
+			"config": "voidcraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
