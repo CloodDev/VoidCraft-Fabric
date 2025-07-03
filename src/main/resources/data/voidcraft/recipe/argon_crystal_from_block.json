@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": ["voidcraft:argon_crystal_block"],
+  "result": {
+    "id": "voidcraft:argon_crystal",
+    "count": 9
+  }
+}

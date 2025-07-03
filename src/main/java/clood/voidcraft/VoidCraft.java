@@ -1,6 +1,7 @@
 package clood.voidcraft;
 
 import clood.voidcraft.block.ModBlocks;
+import clood.voidcraft.entity.ModEntities;
 import clood.voidcraft.items.ModItemGroups;
 import clood.voidcraft.items.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -16,6 +17,7 @@ public class VoidCraft implements ModInitializer {
 	public void onInitialize() {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModEntities.registerModEntities();
 		ModItemGroups.registerItemGroups();
 	}
 }

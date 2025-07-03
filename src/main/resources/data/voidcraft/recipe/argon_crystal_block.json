@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["AAA", "AAA", "AAA"],
+  "key": {
+    "A": "voidcraft:argon_crystal"
+  },
+  "result": {
+    "id": "voidcraft:argon_crystal_block",
+    "count": 1
+  }
+}

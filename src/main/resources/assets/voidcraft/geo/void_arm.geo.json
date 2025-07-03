@@ -1,0 +1,127 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "base",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-13, 0, 6], "size": [8, 8, 11], "pivot": [-10, 1, 6], "rotation": [167.0594, -28.8424, -168.32235], "uv": [0, 16]},
+						{"origin": [-13, 0, -1], "size": [14, 7, 9], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Arm",
+					"parent": "base",
+					"pivot": [-2, 6, 2],
+					"cubes": [
+						{"origin": [-4, 5, 0], "size": [4, 13, 4], "uv": [0, 35]}
+					]
+				},
+				{
+					"name": "ArmSegment2",
+					"parent": "Arm",
+					"pivot": [-2, 18, 2],
+					"cubes": [
+						{"origin": [-3.5, 18, 0.5], "size": [3, 9, 3], "uv": [16, 35]},
+						{"origin": [-3, 26, 1], "size": [2, 9, 2], "uv": [38, 16]}
+					]
+				},
+				{
+					"name": "Hand",
+					"parent": "ArmSegment2",
+					"pivot": [0, 45, 2]
+				},
+				{
+					"name": "HandBase",
+					"parent": "Hand",
+					"pivot": [-2, 35, 2],
+					"cubes": [
+						{"origin": [-5, 35, 1], "size": [6, 3, 2], "uv": [28, 35]}
+					]
+				},
+				{
+					"name": "FBaseT",
+					"parent": "HandBase",
+					"pivot": [-5, 36, 2],
+					"cubes": [
+						{"origin": [-7, 36, 1], "size": [2, 4, 2], "uv": [28, 40]}
+					]
+				},
+				{
+					"name": "boneT",
+					"parent": "FBaseT",
+					"pivot": [-6, 40, 2],
+					"cubes": [
+						{"origin": [-7, 40, 1], "size": [2, 4, 1], "uv": [46, 5]}
+					]
+				},
+				{
+					"name": "Hseg2",
+					"parent": "HandBase",
+					"pivot": [-2, 38, 2],
+					"cubes": [
+						{"origin": [-5, 38, 1], "size": [6, 3, 1], "uv": [38, 27]}
+					]
+				},
+				{
+					"name": "FBase3",
+					"parent": "Hseg2",
+					"pivot": [0, 41, 2],
+					"cubes": [
+						{"origin": [-1, 41, 1], "size": [2, 4, 1], "uv": [36, 40]}
+					]
+				},
+				{
+					"name": "bone3",
+					"parent": "FBase3",
+					"pivot": [0, 45, 2],
+					"cubes": [
+						{"origin": [-1, 45, 1], "size": [2, 4, 1], "uv": [46, 0]}
+					]
+				},
+				{
+					"name": "Fbase2",
+					"parent": "Hseg2",
+					"pivot": [-2, 41, 2],
+					"cubes": [
+						{"origin": [-3, 41, 1], "size": [2, 4, 1], "uv": [42, 40]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "Fbase2",
+					"pivot": [-2, 45, 2],
+					"cubes": [
+						{"origin": [-3, 45, 1], "size": [2, 4, 1], "uv": [42, 45]}
+					]
+				},
+				{
+					"name": "FBase1",
+					"parent": "Hseg2",
+					"pivot": [-4, 41, 2],
+					"cubes": [
+						{"origin": [-5, 41, 1], "size": [2, 4, 1], "uv": [44, 31]}
+					]
+				},
+				{
+					"name": "bone1",
+					"parent": "FBase1",
+					"pivot": [-4, 45, 2],
+					"cubes": [
+						{"origin": [-5, 45, 1], "size": [2, 4, 1], "uv": [36, 45]}
+					]
+				}
+			]
+		}
+	]
+}
