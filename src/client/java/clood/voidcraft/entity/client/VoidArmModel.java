@@ -5,9 +5,6 @@ import clood.voidcraft.entity.custom.VoidArmEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoRenderer;
-import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.animation.AnimationState;
-import software.bernie.geckolib.animation.Animation;
 
 public class VoidArmModel extends GeoModel<VoidArmEntity> {
     private static final Identifier MODEL_RESOURCE = Identifier.of(VoidCraft.MOD_ID, "geo/void_arm.geo.json");
@@ -29,11 +26,6 @@ public class VoidArmModel extends GeoModel<VoidArmEntity> {
     @Override
     public Identifier getAnimationResource(VoidArmEntity animatable) {
         return ANIMATION_RESOURCE;
-    }
-
-    @Override
-    public void setCustomAnimations(VoidArmEntity animatable, long instanceId,
-            AnimationState<VoidArmEntity> animationState) {
     }
 
 }

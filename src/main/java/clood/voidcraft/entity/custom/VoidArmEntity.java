@@ -18,7 +18,6 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
-import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class VoidArmEntity extends AnimalEntity implements GeoEntity {
@@ -29,8 +28,14 @@ public class VoidArmEntity extends AnimalEntity implements GeoEntity {
     }
 
     @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar animationData) {
-        animationData.add(DefaultAnimations.genericWalkRunIdleController(this));
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "controller", 0, state -> {
+            if (state.isMoving()) {
+                return state.setAndContinue(RawAnimation.begin().thenLoop("animation.void_arm.walk"));
+            } else {
+                return state.setAndContinue(RawAnimation.begin().thenLoop("animation.void_arm.idle"));
+            }
+        }));
     }
 
     @Override
@@ -50,7 +55,7 @@ public class VoidArmEntity extends AnimalEntity implements GeoEntity {
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.MAX_HEALTH, 18)
-                .add(EntityAttributes.MOVEMENT_SPEED, 0.35)
+                .add(EntityAttributes.MOVEMENT_SPEED, 0.25)
                 .add(EntityAttributes.ATTACK_DAMAGE, 1)
                 .add(EntityAttributes.FOLLOW_RANGE, 20);
     }
