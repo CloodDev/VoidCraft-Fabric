@@ -1,6 +1,7 @@
 package clood.voidcraft;
 
 import clood.voidcraft.block.ModBlocks;
+import clood.voidcraft.block.entity.ModBlockEntities;
 import clood.voidcraft.entity.ModEntities;
 import clood.voidcraft.items.ModItemGroups;
 import clood.voidcraft.items.ModItems;
@@ -16,6 +17,7 @@ public class VoidCraft implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModItemGroups.registerItemGroups();

@@ -9,12 +9,14 @@ import software.bernie.geckolib.renderer.GeoRenderer;
 
 public class CorruptorBlockModel extends GeoModel<CorruptorBlockEntity> {
   @Override
-  public Identifier getModelResource(CorruptorBlockEntity corruptorBlockEntity, @Nullable GeoRenderer<CorruptorBlockEntity> geoRenderer) {
+  public Identifier getModelResource(CorruptorBlockEntity corruptorBlockEntity,
+      @Nullable GeoRenderer<CorruptorBlockEntity> geoRenderer) {
     return Identifier.of(VoidCraft.MOD_ID, "geo/corruptor.geo.json");
   }
 
   @Override
-  public Identifier getTextureResource(CorruptorBlockEntity corruptorBlockEntity, @Nullable GeoRenderer<CorruptorBlockEntity> geoRenderer) {
+  public Identifier getTextureResource(CorruptorBlockEntity corruptorBlockEntity,
+      @Nullable GeoRenderer<CorruptorBlockEntity> geoRenderer) {
     return Identifier.of(VoidCraft.MOD_ID, "textures/block/corruptor.png");
   }
 
