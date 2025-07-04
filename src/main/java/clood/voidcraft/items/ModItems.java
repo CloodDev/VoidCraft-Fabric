@@ -15,6 +15,9 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     public static final Item ARGON_CRYSTAL = register("argon_crystal", Item::new, new Item.Settings());
+    public static final Item RUBEDO = register("rubedo", Item::new, new Item.Settings());
+    public static final Item RAW_FERRITE = register("raw_ferrite", Item::new, new Item.Settings());
+    public static final Item FERRITE = register("ferrite", Item::new, new Item.Settings());
 
     private static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final Identifier identifier = Identifier.of(VoidCraft.MOD_ID, path);

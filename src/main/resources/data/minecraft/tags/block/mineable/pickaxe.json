@@ -1,4 +1,9 @@
 {
   "replace": false,
-  "values": ["voidcraft:argon_crystal_block", "voidcraft:deepslate_argon_ore"]
+  "values": [
+    "voidcraft:argon_crystal_block",
+    "voidcraft:deepslate_argon_ore",
+    "voidcraft:ferrite_ore",
+    "voidcraft:rubedo_ore"
+  ]
 }

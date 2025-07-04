@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 public class VoidCraftClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		// Register entity renderers
 		EntityRendererRegistry.register(ModEntities.VOID_ARM, VoidArmRenderer::new);
 	}
 }
