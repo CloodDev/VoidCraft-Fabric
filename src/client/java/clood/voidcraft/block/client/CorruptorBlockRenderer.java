@@ -9,17 +9,19 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.LightType;
 import net.minecraft.world.World;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
+import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 
 public class CorruptorBlockRenderer extends GeoBlockRenderer<CorruptorBlockEntity> {
     public CorruptorBlockRenderer(BlockEntityRendererFactory.Context context) {
         super(new CorruptorBlockModel());
+        // Add emission to the renderer
+        addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
 
     @Override
     public void render(CorruptorBlockEntity blockEntity, float partialTick, MatrixStack poseStack,
             VertexConsumerProvider bufferSource, int packedLight, int packedOverlay) {
 
-        // Get proper lighting from the world
         World world = blockEntity.getWorld();
         BlockPos pos = blockEntity.getPos();
 

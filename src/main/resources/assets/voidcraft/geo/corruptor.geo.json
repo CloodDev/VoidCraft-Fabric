@@ -120,7 +120,7 @@
         {
           "name": "Eye",
           "parent": "Base",
-          "pivot": [8, 0, -8],
+          "pivot": [0, 25, 0],
           "cubes": [
             {
               "origin": [-6, 21, 0],
