@@ -60,7 +60,7 @@ public class CorruptorBlockModel extends GeoModel<CorruptorBlockEntity> {
     double pitch = Math.asin(delta.y / delta.length());
 
     // Apply rotation to the bone (flip if needed depending on model orientation)
-    targetBone.setRotY((float) (-(yaw + Math.toRadians(90)))); // Yaw is horizontal (left-right)
-    targetBone.setRotX((float) (pitch)); // Pitch is vertical (up-down)
+    targetBone.setRotY((float) (-(yaw - Math.toRadians(90)))); // Yaw is horizontal (left-right)
+    targetBone.setRotX((float) (-pitch)); // Pitch is vertical (up-down)
   }
 }

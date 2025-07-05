@@ -24,8 +24,11 @@ public class ModItemGroups {
             entries.add(new ItemStack(ModBlocks.CORRUPTOR));
             entries.add(new ItemStack(ModBlocks.FERRITE_ORE));
             entries.add(new ItemStack(ModBlocks.RUBEDO_ORE));
+            entries.add(new ItemStack(ModBlocks.DEEPSLATE_FERRITE_ORE));
+            entries.add(new ItemStack(ModBlocks.DEEPSLATE_RUBEDO_ORE));
             entries.add(new ItemStack(ModBlocks.DEEPSLATE_ARGON_ORE));
             entries.add(new ItemStack(ModBlocks.ARGON_CRYSTAL_BLOCK));
+            entries.add(new ItemStack(ModItems.VOID_DUST));
           })
           .build());
 

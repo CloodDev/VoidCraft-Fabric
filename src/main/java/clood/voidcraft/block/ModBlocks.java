@@ -25,7 +25,11 @@ public class ModBlocks {
   public static final Block RUBEDO_ORE = registerBlock("rubedo_ore", Block::new,
       AbstractBlock.Settings.create().strength(3.0f).requiresTool());
   public static final Block CORRUPTOR = registerBlock("corruptor", settings -> new CorruptorBlock(settings),
-      AbstractBlock.Settings.create().strength(3.0f).requiresTool());
+      AbstractBlock.Settings.create().strength(1.0f).requiresTool());
+  public static final Block DEEPSLATE_FERRITE_ORE = registerBlock("deepslate_ferrite_ore", Block::new,
+      AbstractBlock.Settings.create().strength(4.0f).requiresTool());
+  public static final Block DEEPSLATE_RUBEDO_ORE = registerBlock("deepslate_rubedo_ore", Block::new,
+      AbstractBlock.Settings.create().strength(4.0f).requiresTool());
 
   private static Block registerBlock(String path, Function<AbstractBlock.Settings, Block> factory,
       AbstractBlock.Settings settings) {
