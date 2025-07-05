@@ -10,5 +10,6 @@
   "block.voidcraft.deepslate_ferrite_ore": "Deepslate Ferrite Ore",
   "block.voidcraft.corruptor": "Corruptor",
   "block.voidcraft.ferrite_ore": "Ferrite Ore",
-  "block.voidcraft.rubedo_ore": "Rubedo Ore"
+  "block.voidcraft.rubedo_ore": "Rubedo Ore",
+  "item.voidcraft.void_dust": "Void Dust"
 }
