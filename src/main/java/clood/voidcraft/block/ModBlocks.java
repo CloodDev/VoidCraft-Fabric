@@ -44,11 +44,5 @@ public class ModBlocks {
 
   public static void registerModBlocks() {
     VoidCraft.LOGGER.info("Registering Blocks for " + VoidCraft.MOD_ID);
-
-    // Add blocks to item group
-    ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-      entries.add(DEEPSLATE_ARGON_ORE);
-      entries.add(ARGON_CRYSTAL_BLOCK);
-    });
   }
 }

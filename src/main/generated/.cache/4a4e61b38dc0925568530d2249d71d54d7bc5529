@@ -1,0 +1,7 @@
+// 1.21.4	-999999999-01-01T00:00:00	VoidCraft/World Generation
+68a5984fd3a29ca1cacc9cebed0535fbd517b098 data/voidcraft/worldgen/configured_feature/argon_ore.json
+5c0dbf7d0757ede9e8f550d8ab3a031d36bd33fd data/voidcraft/worldgen/configured_feature/ferrite_ore.json
+6d6abfaeec984150d3e306a48f12c90cb4c59cb5 data/voidcraft/worldgen/configured_feature/rubedo_ore.json
+ce0b968546e41c07b9c658f03955e97fcf6a6339 data/voidcraft/worldgen/placed_feature/argon_ore_placed.json
+2c17c00d818bd43c181e0870bf6299a003a8ca55 data/voidcraft/worldgen/placed_feature/ferrite_ore_placed.json
+8341423e68ec77ad45bb0a76a9f51bcb05f859e2 data/voidcraft/worldgen/placed_feature/rubedo_ore_placed.json

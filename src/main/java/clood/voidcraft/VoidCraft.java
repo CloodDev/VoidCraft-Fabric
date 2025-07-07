@@ -5,6 +5,7 @@ import clood.voidcraft.block.entity.ModBlockEntities;
 import clood.voidcraft.entity.ModEntities;
 import clood.voidcraft.items.ModItemGroups;
 import clood.voidcraft.items.ModItems;
+import clood.voidcraft.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,5 +22,6 @@ public class VoidCraft implements ModInitializer {
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModItemGroups.registerItemGroups();
+		ModWorldGeneration.generateModWorldGen();
 	}
 }

@@ -37,11 +37,10 @@ public class CorruptorBlockModel extends GeoModel<CorruptorBlockEntity> {
       AnimationState<CorruptorBlockEntity> animationState) {
     super.setCustomAnimations(animatable, instanceId, animationState);
 
-    GeoBone targetBone = getAnimationProcessor().getBone("Eye"); // Replace with your bone name
+    GeoBone targetBone = getAnimationProcessor().getBone("Eye");
     if (targetBone == null)
       return;
 
-    // Get nearest player
     World world = animatable.getWorld();
     if (world == null || world.isClient() == false)
       return;
@@ -51,16 +50,14 @@ public class CorruptorBlockModel extends GeoModel<CorruptorBlockEntity> {
     if (player == null)
       return;
 
-    // Get relative yaw and pitch between block and player
     Vec3d blockCenter = Vec3d.ofCenter(animatable.getPos());
     Vec3d playerEyePos = player.getCameraPosVec(1.0F);
-    playerEyePos = playerEyePos.subtract(0, 1, 0); // Adjust for eye height
+    playerEyePos = playerEyePos.subtract(0, 1, 0);
     Vec3d delta = playerEyePos.subtract(blockCenter);
     double yaw = Math.atan2(delta.z, delta.x);
     double pitch = Math.asin(delta.y / delta.length());
 
-    // Apply rotation to the bone (flip if needed depending on model orientation)
-    targetBone.setRotY((float) (-(yaw - Math.toRadians(90)))); // Yaw is horizontal (left-right)
-    targetBone.setRotX((float) (-pitch)); // Pitch is vertical (up-down)
+    targetBone.setRotY((float) (-(yaw - Math.toRadians(90))));
+    targetBone.setRotX((float) (-pitch));
   }
 }

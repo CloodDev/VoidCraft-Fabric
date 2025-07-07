@@ -14,7 +14,6 @@ import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 public class CorruptorBlockRenderer extends GeoBlockRenderer<CorruptorBlockEntity> {
     public CorruptorBlockRenderer(BlockEntityRendererFactory.Context context) {
         super(new CorruptorBlockModel());
-        // Add emission to the renderer
         addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
 

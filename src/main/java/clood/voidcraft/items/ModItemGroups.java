@@ -17,10 +17,11 @@ public class ModItemGroups {
       FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ARGON_CRYSTAL))
           .displayName(Text.translatable("itemgroup.voidcraft.group"))
           .entries((context, entries) -> {
+            entries.add(new ItemStack(ModItems.RAW_FERRITE));
             entries.add(new ItemStack(ModItems.ARGON_CRYSTAL));
             entries.add(new ItemStack(ModItems.RUBEDO));
-            entries.add(new ItemStack(ModItems.RAW_FERRITE));
             entries.add(new ItemStack(ModItems.FERRITE));
+            entries.add(new ItemStack(ModItems.VOID_DUST));
             entries.add(new ItemStack(ModBlocks.CORRUPTOR));
             entries.add(new ItemStack(ModBlocks.FERRITE_ORE));
             entries.add(new ItemStack(ModBlocks.RUBEDO_ORE));
@@ -28,7 +29,6 @@ public class ModItemGroups {
             entries.add(new ItemStack(ModBlocks.DEEPSLATE_RUBEDO_ORE));
             entries.add(new ItemStack(ModBlocks.DEEPSLATE_ARGON_ORE));
             entries.add(new ItemStack(ModBlocks.ARGON_CRYSTAL_BLOCK));
-            entries.add(new ItemStack(ModItems.VOID_DUST));
           })
           .build());
 
