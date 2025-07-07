@@ -5,13 +5,13 @@ import clood.voidcraft.block.entity.ModBlockEntities;
 import clood.voidcraft.entity.ModEntities;
 import clood.voidcraft.entity.client.VoidArmRenderer;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
 public class VoidCraftClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		EntityRendererRegistry.register(ModEntities.VOID_ARM, VoidArmRenderer::new);
-		BlockEntityRendererRegistry.register(ModBlockEntities.CORRUPTOR, CorruptorBlockRenderer::new);
+		BlockEntityRendererFactories.register(ModBlockEntities.CORRUPTOR, CorruptorBlockRenderer::new);
 	}
 }
