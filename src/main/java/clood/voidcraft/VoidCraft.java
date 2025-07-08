@@ -22,6 +22,7 @@ public class VoidCraft implements ModInitializer {
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModItemGroups.registerItemGroups();
+
 		ModWorldGeneration.generateModWorldGen();
 	}
 }

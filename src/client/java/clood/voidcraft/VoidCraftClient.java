@@ -13,5 +13,9 @@ public class VoidCraftClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		EntityRendererRegistry.register(ModEntities.VOID_ARM, VoidArmRenderer::new);
 		BlockEntityRendererFactories.register(ModBlockEntities.CORRUPTOR, CorruptorBlockRenderer::new);
+
+		// GeckoLib 4 should automatically handle GeoItem implementations
+		// The CorruptorBlockItem implements GeoItem and should be detected
+		// automatically
 	}
 }

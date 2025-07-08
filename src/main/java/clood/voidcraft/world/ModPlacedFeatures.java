@@ -33,7 +33,7 @@ public class ModPlacedFeatures {
     register(context, ARGON_ORE_PLACED_KEY,
         configuredFeatures.getOrThrow(ModConfiguredFeatures.ARGON_ORE_KEY),
         ModOrePlacement.modifiersWithCount(3,
-            HeightRangePlacementModifier.uniform(YOffset.fixed(-40), YOffset.fixed(40))));
+            HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
   }
 
   public static RegistryKey<PlacedFeature> registerKey(String name) {

@@ -19,6 +19,9 @@ public class ModItems {
     public static final Item RAW_FERRITE = register("raw_ferrite", Item::new, new Item.Settings());
     public static final Item FERRITE = register("ferrite", Item::new, new Item.Settings());
     public static final Item VOID_DUST = register("void_dust", Item::new, new Item.Settings());
+    // CORRUPTOR_ITEM removed - now using the block's item with GeckoLib rendering
+    // public static final Item CORRUPTOR_ITEM = register("corruptor_item",
+    // CorruptorItem::new, new Item.Settings());
 
     private static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final Identifier identifier = Identifier.of(VoidCraft.MOD_ID, path);
