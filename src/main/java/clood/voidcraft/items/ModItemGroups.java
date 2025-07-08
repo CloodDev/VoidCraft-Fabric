@@ -22,7 +22,7 @@ public class ModItemGroups {
             entries.add(new ItemStack(ModItems.RUBEDO));
             entries.add(new ItemStack(ModItems.FERRITE));
             entries.add(new ItemStack(ModItems.VOID_DUST));
-            entries.add(new ItemStack(ModBlocks.CORRUPTOR)); // Now uses GeckoLib 3D rendering
+            entries.add(new ItemStack(ModBlocks.CORRUPTOR.asItem())); // Use the GeckoLib item
             entries.add(new ItemStack(ModBlocks.FERRITE_ORE));
             entries.add(new ItemStack(ModBlocks.RUBEDO_ORE));
             entries.add(new ItemStack(ModBlocks.DEEPSLATE_FERRITE_ORE));
