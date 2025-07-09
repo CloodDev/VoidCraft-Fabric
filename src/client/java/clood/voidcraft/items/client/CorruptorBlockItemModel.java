@@ -14,7 +14,7 @@ public class CorruptorBlockItemModel extends GeoModel<CorruptorBlockItem> {
 
   @Override
   public Identifier getTextureResource(CorruptorBlockItem animatable, GeoRenderer<CorruptorBlockItem> renderer) {
-    return Identifier.of(VoidCraft.MOD_ID, "textures/block/corruptor.png");
+    return Identifier.of(VoidCraft.MOD_ID, "textures/item/corruptor_item.png");
   }
 
   @Override

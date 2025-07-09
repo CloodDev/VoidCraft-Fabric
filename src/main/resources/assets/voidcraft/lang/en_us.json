@@ -11,5 +11,6 @@
   "block.voidcraft.corruptor": "Corruptor",
   "block.voidcraft.ferrite_ore": "Ferrite Ore",
   "block.voidcraft.rubedo_ore": "Rubedo Ore",
-  "item.voidcraft.void_dust": "Void Dust"
+  "item.voidcraft.void_dust": "Void Dust",
+  "item.voidcraft.corruptor": "Corruptor"
 }

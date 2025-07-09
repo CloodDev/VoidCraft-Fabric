@@ -1,6 +1,0 @@
-# This file represents a 16x16 texture for corruptor_item_fallback.png
-# Since we can't create actual image files through text, you should:
-# 1. Create a 16x16 pixel image in your image editor
-# 2. Make it look like a small corruptor icon
-# 3. Save it as corruptor_item_fallback.png in the textures/item directory
-# This will be shown if the GeckoLib 3D model doesn't render properly
