@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "voidcraft:block/corruptor"
+    "down": "minecraft:block/oak_planks",
+    "east": "voidcraft:block/corruptor_side",
+    "north": "voidcraft:block/corruptor_front",
+    "south": "voidcraft:block/corruptor_side",
+    "up": "voidcraft:block/corruptor_top",
+    "west": "voidcraft:block/corruptor_front",
+    "particle": "voidcraft:block/corruptor_front"
   }
 }

@@ -12,5 +12,8 @@
   "block.voidcraft.ferrite_ore": "Złoże Ferrytu",
   "block.voidcraft.rubedo_ore": "Złoże Rubedo",
   "item.voidcraft.void_dust": "Pył Pustki",
-  "item.voidcraft.corruptor": "Korruptor"
+  "item.voidcraft.corruptor": "Korruptor",
+  "block.voidcraft.void_log": "Kłoda Pustki",
+  "block.voidcraft.void_planks": "Deski Pustki",
+  "block.voidcraft.void_sapling": "Sadzonka Pustki"
 }

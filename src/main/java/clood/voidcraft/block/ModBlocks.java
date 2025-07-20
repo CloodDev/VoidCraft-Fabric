@@ -6,13 +6,13 @@ import clood.voidcraft.VoidCraft;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import clood.voidcraft.block.custom.CorruptorBlock;
-import clood.voidcraft.items.custom.CorruptorBlockItem;
+import clood.voidcraft.block.custom.VoidSaplingBlock;
 
 public class ModBlocks {
         public static final Block DEEPSLATE_ARGON_ORE = registerBlock("deepslate_argon_ore", Block::new,
@@ -30,6 +30,22 @@ public class ModBlocks {
                         AbstractBlock.Settings.create().strength(4.5f).requiresTool());
         public static final Block DEEPSLATE_RUBEDO_ORE = registerBlock("deepslate_rubedo_ore", Block::new,
                         AbstractBlock.Settings.create().strength(4.5f).requiresTool());
+        public static final Block VOID_LOG = registerBlock("void_log", PillarBlock::new,
+                        AbstractBlock.Settings.create()
+                                        .strength(2.0f)
+                                        .requiresTool()
+                                        .burnable()
+                                        .solid()
+                                        .ticksRandomly()
+                                        .sounds(net.minecraft.sound.BlockSoundGroup.WOOD));
+        public static final Block VOID_SAPLING = registerBlock("void_sapling",
+                        VoidSaplingBlock::new,
+                        AbstractBlock.Settings.create()
+                                        .strength(0.0f)
+                                        .noCollision()
+                                        .ticksRandomly()
+                                        .breakInstantly()
+                                        .sounds(net.minecraft.sound.BlockSoundGroup.GRASS));
 
         private static Block registerBlock(String path, Function<AbstractBlock.Settings, Block> factory,
                         AbstractBlock.Settings settings) {
@@ -37,13 +53,7 @@ public class ModBlocks {
                 final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
 
                 final Block block = Blocks.register(registryKey, factory, settings);
-                if (path.equals("corruptor")) {
-                        final RegistryKey<Item> itemRegistryKey = RegistryKey.of(RegistryKeys.ITEM, identifier);
-                        Items.register(itemRegistryKey, (settings1) -> new CorruptorBlockItem(block, settings1),
-                                        new Item.Settings());
-                } else {
-                        Items.register(block);
-                }
+                Items.register(block);
 
                 return block;
         }

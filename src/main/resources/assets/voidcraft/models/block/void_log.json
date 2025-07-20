@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "voidcraft:block/void_log_top",
+    "east": "voidcraft:block/void_log_side",
+    "north": "voidcraft:block/void_log_side",
+    "south": "voidcraft:block/void_log_side",
+    "up": "voidcraft:block/void_log_top",
+    "west": "voidcraft:block/void_log_side",
+    "particle": "voidcraft:block/void_log_side"
+  }
+}

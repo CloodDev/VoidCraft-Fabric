@@ -29,6 +29,8 @@ public class ModItemGroups {
             entries.add(new ItemStack(ModBlocks.DEEPSLATE_RUBEDO_ORE));
             entries.add(new ItemStack(ModBlocks.DEEPSLATE_ARGON_ORE));
             entries.add(new ItemStack(ModBlocks.ARGON_CRYSTAL_BLOCK));
+            entries.add(new ItemStack(ModBlocks.VOID_LOG));
+            entries.add(new ItemStack(ModBlocks.VOID_SAPLING));
           })
           .build());
 

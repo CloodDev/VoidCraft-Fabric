@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "voidcraft:block/void_log" },
+    "axis=z": { "model": "voidcraft:block/void_log", "x": 90 },
+    "axis=x": { "model": "voidcraft:block/void_log", "x": 90, "y": 90 }
+  }
+}
